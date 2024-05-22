@@ -1,0 +1,83 @@
+<app-header-front></app-header-front>
+<!--<main id="main" class="main">
+  <div class="container-fluid">
+    <table class="table table-light">
+      <thead class="thead-light">
+      <tr>
+        <th>Date Added</th>
+        <th>Time Added</th>
+        <th>Format Image</th>
+        <th>Path Image</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of images ">
+        <td>{{s.dateAdded}}</td>
+        <td>{{s.time}}</td>
+        <td>{{s.format}}</td>
+        <td>{{s.path}}</td>
+        <img src="{{s.path}}" alt="Nom de l'image">
+        <td>
+          <button class="btn btn-warning" style="margin-right: 5px;"
+                  [routerLink]="['/edit-image',s.imageID]">Edit</button>
+          <button *ngIf="s.imageID !== null" class="btn btn-danger" (click)="deleteImage(s.imageID)">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</main>-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="text-center border rounded p-3 mb-4 bg-secondary">
+        <h2 class="mb-0">All Images</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let s of images" data-aos="fade-up" data-aos-delay="200">
+      <div class="card border-primary mb-4 shadow">
+        <img src="{{s.path}}" alt="Nom de l'image">
+
+        <div class="card-body">
+          <h6 class="card-title"><strong>Date Added:</strong>{{s.dateAdded}}</h6>
+          <h6 class="card-title"><strong>Time Added:</strong>{{s.time}}</h6>
+          <ul class="list-group list-group-flush">
+            <div class="row">
+              <li class="list-group-item col-md-6">
+                <strong>Format Image:</strong> {{s.format }}
+              </li>
+
+            </div>
+            <div class="row">
+              <li class="list-group-item col-md-6">
+                <strong>Description Image:</strong> {{s.description }}
+              </li>
+
+            </div>
+            <div class="row">
+              <li class="list-group-item col-md-6">
+                <strong>Description Image:</strong> {{s.car_id }}
+              </li>
+
+            </div>
+
+          </ul>
+                </div>
+        <div class="card-footer bg-transparent border-primary d-flex justify-content-between align-items-center">
+          <button class="btn btn-warning" [routerLink]="['/affectimage']">Edit</button>
+          <button class="btn btn-warning" [routerLink]="['/affectimage', s.imageID]">Edit</button>
+          <button *ngIf="s.imageID !== null" class="btn btn-danger" (click)="deleteImage(s.imageID)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer-front></app-footer-front>
+

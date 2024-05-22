@@ -1,0 +1,40 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<main id="main" class="main">
+  <form [formGroup]="TripStopForm" (ngSubmit)="save()">
+    <div>
+      <label for="stopId">Select a stop:</label>
+      <select id="stopId" name="stopId" formControlName="stopId">
+        <option *ngFor="let stop of stops" [value]="stop.idStop">{{ stop.name }}</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="tripId">Select a trip:</label>
+      <select id="tripId" name="tripId" formControlName="tripId">
+        <option *ngFor="let trip of trips" [value]="trip.idTrip">{{ trip.idTrip }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="arrivalTime">Arrival Time</label>
+      <input type="datetime-local" class="form-control" formControlName="arrivalTime" id="arrivalTime">
+
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input type="number" class="form-control" formControlName="amount" id="amount">
+
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
+</main>
+
+<app-footer-back></app-footer-back>

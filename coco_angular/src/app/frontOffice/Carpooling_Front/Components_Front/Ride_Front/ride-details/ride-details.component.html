@@ -1,0 +1,47 @@
+<app-header-front></app-header-front>
+
+<!--<app-navbar-back></app-navbar-back>-->
+
+<a href="/home" class="btn btn-primary"><span>Back to Home Page</span></a>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="text-center border rounded p-3 mb-4 bg-secondary">
+        <h2 class="mb-0">Ride Details</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Left section with "rid" attributes -->
+    <div class="col-md-6">
+      <div class="card border-primary mb-4 shadow">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Start Location:</strong> {{rid.startLocation}}</h5>
+          <h5 class="card-title"><strong>Arrival Address:</strong> {{rid.arrivalAddress}}</h5>
+          <h5 class="card-title"><strong>Car Model:</strong> {{rid.time}}</h5>
+          <h5 class="card-title"><strong>Departure Date:</strong> {{rid.departureDate}}</h5>
+          <h5 class="card-title"><strong>Preference:</strong> {{rid.preference}}</h5>
+          <h5 class="card-title"><strong>Smoking Vehicle:</strong> {{rid.smoking_Vehicle ? 'Yes' : 'No'}}</h5>
+          <h5 class="card-title"><strong>Avoid Tolls:</strong> {{rid.avoidTolls ? 'Yes' : 'No'}}</h5>
+          <h5 class="card-title"><strong>Price (DT):</strong> {{rid.price}}</h5>
+        </div>
+      </div>
+    </div>
+    <!-- Right section with remaining attributes -->
+    <div class="col-md-6">
+      <div class="card border-primary mb-4 shadow">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Car Model:</strong> {{car.model}}</h5>
+          <h5 class="card-title"><strong>Comfort:</strong> {{car.comfort}}</h5>
+          <img src="{{image.path}}" class="img-fluid mb-3" alt="Car Image">
+
+          <button class="btn btn-info" (click)="showaImages(car.carID)">Show Car Image</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer-front></app-footer-front>

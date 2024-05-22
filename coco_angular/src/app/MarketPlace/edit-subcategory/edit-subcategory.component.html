@@ -1,0 +1,51 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+<div class="container-fluid mt-5">
+    <div class="pt-4">
+        <div class="d-flex justify-content-center">
+            <nav class="nav bg-dark">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/category-list']">Category List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/register-category-product']"> Add Category </a>
+                </li>
+            </nav>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center">
+            <div>
+                <h2>Edit SubCategory</h2>
+
+                <form (ngSubmit)="saveEditedCategory()">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="subcategoryName"> SubCategoryName </label>
+                            <input type="text" id="subcategoryName" name="subcategoryName" [(ngModel)]="editedSubCategoryName" class="form-control" required #subcategoryName="ngModel">
+                            <div class="text-danger" *ngIf="subcategoryName.invalid && (subcategoryName.dirty || subcategoryName.touched)">
+                                SubCategoryName is required
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" [disabled]="subcategoryName.invalid">Save Changes</button>
+
+                        <div class="card-footer" *ngIf="showAlert">
+                        <div class="alert alert-success" role="alert">
+                            <button class="close" (click)="closeAlert()">&times;</button>
+                            <strong>Successfull edited</strong>
+                        </div>
+                    </div>
+
+                    <!-- Add other form fields as needed -->
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer-back></app-footer-back>

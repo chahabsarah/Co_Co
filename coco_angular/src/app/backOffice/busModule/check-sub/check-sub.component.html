@@ -1,0 +1,47 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<main id="main" class="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" [(ngModel)]="search"
+              placeholder="Search" aria-label="Search"
+              aria-describedby="basic-addon2">
+          <div class="input-group-append">
+              <button class="btn btn-outline-secondary"
+                  type="button">Search</button>
+          </div>
+        </div>
+
+        <div class="tab-container">
+          <ul class="nav nav-tabs">
+            <li class="nav-item" *ngFor="let s of listSub">
+              <a class="nav-link" [class.active]="s.id == search || search == 0" (click)="selectTab(s.id)">{{ s.id }}</a>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane" *ngFor="let s of listSub" [class.active]="s.id == search || search == 0">
+              <div class="card mt-3">
+                <div class="card-body">
+                  <div class="subscription-info">
+                    <div class="mb-2"><strong>Remaining Trips:</strong> {{ s.remainingTrips }}</div>
+                    <div class="mb-2"><strong>TripStops:</strong> {{ s.tripStops }}</div>
+                    <div class="mb-2"><strong>Payment Method:</strong> {{ s.subscriptionPaymentMethod }}</div>
+                    <div class="mb-2"><strong>Status:</strong> {{ s.status }}</div>
+                    <div class="mb-2"><strong>Price:</strong> {{ s.subscriptionPrice }}</div>
+                    <button class="btn btn-primary" (click)="updateRemainingTrips(s)">Decrease Remaining Trips</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<app-footer-back></app-footer-back>

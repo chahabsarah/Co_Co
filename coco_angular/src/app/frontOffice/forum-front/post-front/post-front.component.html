@@ -1,0 +1,57 @@
+<app-header-front></app-header-front>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Front</title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="post-front.component.css">
+</head>
+<body>
+<div class="container">
+  <!-- Add Post Form -->
+  <div class="add-post-box">
+    <form [formGroup]="postForm" (ngSubmit)="addPost()">
+      <textarea formControlName="content" class="post-input" placeholder="What's happening?"></textarea>
+      <button type="submit" class="add-post-btn">Public</button>
+    </form>
+  </div>
+
+  <!-- Display Posts -->
+  <div *ngFor="let post of sortedPosts()" class="post">
+    <div class="post-header">
+      <div class="post-avatar"></div>
+      <div class="post-userinfo">
+        <strong>{{ post.username }}</strong><br>
+        @{{ post.username }} • <small class="text-muted"><i class="fas fa-clock"></i> {{ post.createdDate | relativeTime }}</small>
+      </div>
+    </div>
+    <div class="post-content">
+      {{ post.description }}
+    </div>
+    <div class="vote-container">
+      <div class="vote-buttons">
+        <button class="upvote" (click)="upvote(post)">
+          <svg viewBox="0 0 20 20" class="icon upvote-icon">
+            <path fill="currentColor" d="M10 3.333l6.667 6.667H3.333L10 3.333zm0 0"/>
+          </svg>
+        </button>
+        <div class="count">{{ post.upvotes - post.downvotes }}</div>
+        <button class="downvote" (click)="downvote(post)">
+          <svg viewBox="0 0 20 20" class="icon downvote-icon">
+            <path fill="currentColor" d="M10 16.667l6.667-10H3.333L10 16.667zm0 0"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="post-actions">
+      <!-- Show Post Details Button -->
+      <button (click)="showPostDetails(post.postId)" class="action-btn show-btn">Show</button>
+      <!-- Add Comment Button -->
+      <button (click)="getPostAndComments(post.postId)" class="Comment-btn">Comment</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

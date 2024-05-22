@@ -1,0 +1,34 @@
+
+<app-header-front></app-header-front>
+
+<main id="main" class="main">
+  <div class="ex-form-1 pt-5 pb-5">
+    <div>
+      <div class="row">
+        <div class="col-xl-6 offset-xl-3">
+          <div class="text-box mt-5 mb-5">
+            <form #f="ngForm" (ngSubmit)="addSubCategory(f); formSubmitted = true;">
+              <div class="mb-4 form-floating">
+                <input type="text" class="form-control" id="subCategoryTitle" name="subCategoryTitle" [(ngModel)]="subcategory.subCategoryTitle" required>
+                <label for="subCategoryTitle">SubCategory Title</label>
+              </div>
+              <div class="mb-4 form-floating">
+                <input type="text" class="form-control" id="subCategoryDescription" name="subCategoryDescription" [(ngModel)]="subcategory.subCategoryDescription" required>
+                <label for="subCategoryDescription">SubCategory Description</label>
+              </div>
+              <div class="mb-4">
+                <label for="category">Select a Category:</label>
+                <select class="form-select" id="category" name="category" [(ngModel)]="subcategory.category" required>
+                  <option *ngFor="let category of categories" [ngValue]="category">{{ category.categoryTitle }}</option>
+                </select>
+
+              </div>
+              <button type="submit" class="form-control-submit-button">Add SubCategory</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer-front></app-footer-front>

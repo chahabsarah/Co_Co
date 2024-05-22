@@ -1,0 +1,97 @@
+<app-header-front></app-header-front>
+
+
+<main id="main" class="main">
+
+
+
+  <div class="container-fluid">
+
+    <div class="card" style="width: 50%;margin: 5px auto;">
+      <div class="card-header">
+        Add New Ride
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="rideID">rideID</label>
+            <input [(ngModel)]="ride.rideID" id="rideID" name="rideID" class="form-control" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="startLocation">start Location</label>
+            <input [(ngModel)]="ride.startLocation" id="startLocation" name="startLocation" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="departureDate">departureDate</label>
+            <input [(ngModel)]="ride.departureDate" id="departureDate" name="departureDate" class="form-control" type="date">
+          </div>
+          <div class="form-group">
+            <label for="arrivalAddress">Arrival Address</label>
+            <input [(ngModel)]="ride.arrivalAddress" id="arrivalAddress" name="arrivalAddress" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input [(ngModel)]="ride.time" id="time" name="time" class="form-control" type="time">
+          </div>
+          <!--<div class="form-group">
+            <label for="smokingVehicle">Smoking Vehicle</label>
+            <input [(ngModel)]="ride.smoking_Vehicle" id="smokingVehicle" name="smokingVehicle" class="form-control" type="checkbox">
+          </div>-->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="ride.smoking_Vehicle" id="smokerFriendly">
+            <label class="form-check-label" for="smokerFriendly">
+              My vehicle is smoker-friendly
+            </label>
+          </div>
+          <!--  <div class="form-group">
+             <label for="preference">Preference</label>
+             <input [(ngModel)]="ride.preference" id="preference" name="preference" class="form-control" type="text">
+           </div>-->
+          <div class="col-md-6">
+            <div class="form-floating">
+              <select class="form-select" aria-label="Preference" [(ngModel)]="ride.preference">
+                <option [ngValue]="'onTime'">I will depart on time</option>
+                <option [ngValue]="'plus-Minus15'">+/- 15 min</option>
+                <option [ngValue]="'plus-Minus30'">+/- 30 min</option>
+              </select>
+              <label>Departure Preference</label>
+            </div>
+
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="ride.avoidTolls" id="avoidTolls">
+            <label class="form-check-label" for="avoidTolls">Avoid Tolls</label>
+          </div>
+         <!-- <div class="form-group">
+            <label for="avoidTolls">Avoid Tolls</label>
+            <input type="checkbox" [(ngModel)]="ride.avoidTolls" id="avoidTolls" name="avoidTolls" class="form-control" >
+          </div>-->
+
+         <!-- <div class="form-group">
+            <label for="arrivalDate">arrivalDate</label>
+            <input [(ngModel)]="ride.arrivalDate" id="arrivalDate" name="arrivalDate" class="form-control" type="date">
+          </div>-->
+          <div class="form-group">
+            <label for="price">price</label>
+            <input [(ngModel)]="ride.price" name="price" id="price" class="form-control" type="text">
+          </div>
+
+          <button class="btn btn-primary" (click)="updateRide()">Save</button>
+        </form>
+      </div>
+      <div class="card-footer" *ngIf="showAlert">
+        <div class="alert alert-success">
+          <button (click)="closeAlert()" class="close">
+            &times;
+          </button>
+          <strong>Success</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</main>
+<app-footer-front></app-footer-front>
+

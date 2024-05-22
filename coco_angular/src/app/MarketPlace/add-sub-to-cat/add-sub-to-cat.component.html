@@ -1,0 +1,30 @@
+<!--<main id="main" class="main">
+    <div class="form-group">
+        <form #form="ngForm" (ngSubmit)="affect(form)">
+            <div class="form-group">
+                <label for="idCategory">Category ID:</label>
+                <input type="number" class="form-control" id="idCategory" name="idCategory" [(ngModel)]="idCategory" required>
+            </div>
+            <div class="form-group">
+                <label for="idSubCategory">Subcategory ID:</label>
+                <input type="number" class="form-control" id="idSubCategory" name="idSubCategory" [(ngModel)]="idSubCategory" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Affect</button>
+            <a class="btn btn-secondary" [routerLink]="['/category-list']">Category List</a>
+        </form>
+    </div>
+</main>-->
+<!-- your-component.component.html -->
+
+<form (ngSubmit)="onSubmit()">
+    <div>
+        <label for="idCategory">ID Category:</label>
+        <input type="number" id="idCategory" name="idCategory" [(ngModel)]="idCategory" required>
+    </div>
+    <div>
+        <label for="idSubCategory">ID SubCategory:</label>
+        <input type="number" id="idSubCategory" name="idSubCategory" [(ngModel)]="idSubCategory" required>
+    </div>
+    <button type="submit">Add Subcategory</button>
+</form>
+

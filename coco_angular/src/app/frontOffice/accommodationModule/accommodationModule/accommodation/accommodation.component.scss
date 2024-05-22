@@ -1,0 +1,79 @@
+#btnn {
+  background-color:#05bbf2 ;
+  border-color: #05bbf2;
+  color:white;
+  border-width: 3px;
+  border-radius: 10px;
+}
+.bi-trash3{
+  fill :red;
+}
+.bi-pencil {
+  fill: #052077;
+}
+.bi-eye{
+  fill: #FFA500;
+}
+.map-container {
+  height: 300px; /* Adjust height as needed */
+}
+/* map.component.css */
+.map-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+}
+
+.map-frame {
+  height: 30%;
+  width: 20%;
+}
+
+#map {
+ height: 100px;
+ width: 100px;
+}
+/* Styles for Accommodation Cards */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 0.75rem 1rem;
+}
+
+.card-footer button {
+  margin-right: 5px;
+}
+
+/* Styles for Titles */
+.card-text,
+.card-footer {
+  font-weight: bold;
+  color: darkblue;
+}
+
+/* Styles for Paragraphs */
+.card-body p {
+  font-weight: bold;
+  color: darkblue; /* blue-cyan color */
+}

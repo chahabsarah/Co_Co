@@ -1,0 +1,67 @@
+<!--<div class="mt-4">
+  <div class="col-md-6">
+    <div class="form-floating mb-3">
+      <input type="date" class="form-control" placeholder="Date" [(ngModel)]="date">
+      <label>Date</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="time" class="form-control" placeholder="Time" [(ngModel)]="time">
+      <label>Time</label>
+    </div>
+    <div class="form-floating">
+      <select class="form-select" aria-label="Preference" [(ngModel)]="preference">
+        <option selected disabled>Choose your preference</option>
+        <option value="onTime">I will depart on time</option>
+        <option value="plusMinus15">+/- 15 min</option>
+        <option value="plusMinus30">+/- 30 min</option>
+      </select>
+      <label>Departure Preference</label>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-between flex-row mb-5 mt-4">
+  <button class="btn btn-outline-primary" cdkStepperPrevious>
+    <i class="fa fa-angle-left"></i> Back To My Role
+  </button>
+  <button class="btn btn-outline-primary" cdkStepperNext>
+    Go To Itinerary & Cost <i class="fa fa-angle-right"></i>
+  </button>
+</div>-->
+<div class="mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-floating mb-3">
+        <input type="date" class="form-control" placeholder="Date" [(ngModel)]="departureDate">
+        <label>Date</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="time" class="form-control" placeholder="Time" [(ngModel)]="time">
+        <label>Time</label>
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-floating">
+        <select class="form-select" aria-label="Preference" [(ngModel)]="preference">
+          <option selected disabled>Choose your preference</option>
+          <option value="onTime">I will depart on time</option>
+          <option value="plus-Minus15">+/- 15 min</option>
+          <option value="plus-Minus30">+/- 30 min</option>
+        </select>
+        <label>Departure Preference</label>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-between flex-row mb-5 mt-4">
+  <button class="btn btn-outline-primary"  cdkStepperPrevious>
+      <i class="fa fa-angle-left"></i> back To My Role
+  </button>
+  <button class="btn btn-outline-primary" (click)="showFormData()" cdkStepperNext>
+    Go To Itinerary & Cost <i class="fa fa-angle-right"></i>
+  </button>
+</div>

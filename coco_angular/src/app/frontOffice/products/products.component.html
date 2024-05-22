@@ -1,0 +1,53 @@
+<app-header-front></app-header-front>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<div class="container mt-4">
+  <!-- Search criteria -->
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search by name" [(ngModel)]="searchText" (input)="applyFilters()">
+    <input type="number" class="search-input" placeholder="Min Price" [(ngModel)]="minPrice" (input)="applyFilters()">
+    <input type="number" class="search-input" placeholder="Max Price" [(ngModel)]="maxPrice" (input)="applyFilters()">
+    <select class="search-input" [(ngModel)]="selectedType" (change)="applyFilters()">
+      <option value="">All Types</option>
+      <option value="SELL">SELL</option>
+      <option value="RENT">RENT</option>
+    </select>
+    <i class="bi bi-sort-up" (click)="sortProductsByPriceAsc()">Sort by Price (Asc)</i>
+    <i class="bi bi-sort-down" (click)="sortProductsByPriceDesc()"></i>
+
+   <!-- <button class="btn btn-primary" (click)="sortProductsByPriceAsc()"><i class="fa fa-sort-amount-up"></i> Sort by Price (Asc)</button>-->
+
+
+    <!-- Display filtered products -->
+  <div class="row mt-4">
+    <div class="col-md-4" *ngFor="let product of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage:p}">
+      <div class="card mb-4">
+        <div class="card-body">
+
+        <!--  <img *ngIf="getProductImageUrl(product.idProduct) | async as imageUrl" [src]="imageUrl" class="card-img-top" alt="Image 1" height="175px">-->
+
+         <!-- <img [src]="getProductImageUrl(product.idProduct) | async" class="card-img-top" alt="Image" height="175px">-->
+
+
+          <!--<img [src]="product.pictureProduct.imageUrl" [alt]="product.pictureProduct.idpicture">-->
+
+
+          <img src="http://res.cloudinary.com/dka2ywu6t/image/upload/v1712023689/i7xkyrxwrptuocoftmey.png">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text"><strong>Price:</strong> {{product.price}}</p>
+          <p class="card-text"><strong>Type:</strong> {{product.typeProduct}}</p>
+          <app-rating [idProduct]="product.idProduct"></app-rating>
+          <button class="btn btn-primary" (click)="addToFavorites(product.idProduct)" >Add to Favorites</button>
+          <!--<button class="btn btn-danger" (click)="removeFromFavorites(product.idProduct)">Remove from Favorites</button>  Nouveau bouton  -->
+         <!-- <button style='font-size:24px'>Button <i class='fas fa-heart'(click)="addToFavorites(product.idProduct)"></i></button>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="mt-8 py-5 flex justify-center item-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>
+
+<app-footer-front></app-footer-front>

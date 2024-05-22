@@ -1,0 +1,13 @@
+<!-- add-product-to-subcategory.component.html -->
+
+<form (ngSubmit)="onSubmit()">
+    <div>
+        <label for="idProduct">Product ID:</label>
+        <input type="number" id="idProduct" name="idProduct" [(ngModel)]="idProduct" required>
+    </div>
+    <div>
+        <label for="idSubCategory">Subcategory ID:</label>
+        <input type="number" id="idSubCategory" name="idSubCategory" [(ngModel)]="idSubCategory" required>
+    </div>
+    <button type="submit">Assign Product to Subcategory</button>
+</form>

@@ -1,0 +1,87 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<div class="container-fluid mt-5">
+    <div class="pt-5 d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
+            <nav class="nav bg-dark ">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/product-list']">Product List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/register-product']"> Add Product </a>
+                </li>
+
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 mx-auto">
+                <div class="container">
+                    <div class="row">
+                        <div class="search-hero">
+                            <input type="text" name="search"[(ngModel)]="searchText" placeholder="Search by name or price">
+                        </div>
+                <table class="table table-light">
+                    <thead class="thead-light">
+                    <tr>
+                        <!-- <th> ID Category</th> -->
+                        <th> Name </th>
+                        <th> TypeProduct </th>
+                        <th> Description</th>
+                        <th> Quantity</th>
+                        <th> Weight</th>
+                        <th> Price</th>
+                      <th>Picture</th>
+                        <th> Action</th>
+
+
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr *ngFor="let c of products | filter:searchText |paginate:{
+                    itemsPerPage:tableSizes,
+                    currentPage:page,
+                    totalItems:count}; let i = index" >
+                        <!--<td>{{c.idCategory}}</td>-->
+
+                        <td>{{c.name}}</td>
+                        <td>{{c.typeProduct}}</td>
+                        <td>{{c.description}}</td>
+                        <td>{{c.quantity}}</td>
+                        <td>{{c.weight}}</td>
+                        <td>{{c.price}}</td>
+                        <td>   </td>
+                          <!--  <td>  <button class="btn btn-primary" (click)="loadImageUrl()">Load Image</button></td>-->
+
+
+                        <td>
+                           <button class="btn btn-warning" style="margin-right: 10px;" [routerLink]="['/edit-product',c.idProduct]" >EDIT</button>
+                            <button class="btn btn-danger" (click)="deleteProduct(c.idProduct)" >DELETE</button>
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div>
+                    <pagination-controls
+                        previousLabel="Prev"
+                        nextLabel="Next"
+                        (pageChange)="onTableDataChange($event)"
+                        >
+                    </pagination-controls>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer-back></app-footer-back>

@@ -1,0 +1,144 @@
+<app-header-front></app-header-front>
+<div class="container">
+
+<div class="full-width-container" >
+  <div class="titre">
+  <h1 class="tex">FIND</h1>
+  <h1 class="tex"><strong>CARPOOLING</strong></h1>
+  <h5 class="tex">Carpool on all your types of trips without any commission.</h5>
+  </div>
+  <div class="input-group">
+    <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
+    <input type="text" class="form-control input-field" [(ngModel)]="startLocation" placeholder="Start Location">
+
+  <input type="text" class="form-control input-field" [(ngModel)]="arrivalLocation" placeholder="Arrival Location">
+    <span class="input-group-text"><i class="bi bi-cursor-fill"></i></span>
+  </div>
+  <!-- <button class="action-button">Start Search</button>
+ <a href="#" style="--clr: #0f0"><span>add</span></a>
+  <a href="#" style="--clr: #0f0"><span>add</span></a>
+  <a href="#" style="--clr: #0f0"><span>Lancer La Recherche</span></a>-->
+  <style>
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 20px; /* Arrondir les coins */
+      background-color: var(--clr, #87CEEB); /* Couleur de fond avec la possibilité de personnaliser */
+      text-decoration: none; /* Supprimer le soulignement du lien */
+      color: #fff; /* Couleur du texte */
+      transition: background-color 0.3s ease; /* Transition fluide */
+    }
+
+    a:hover {
+      background-color: #0c0; /* Changer la couleur de fond au survol */
+    }
+
+    a span {
+      pointer-events: none; /* Empêcher le span de réagir aux événements de la souris */
+    }
+  </style>
+
+  <a href="" (click)="searchRide($event)"><span>Start search</span></a>
+
+ <!-- <a><span><button class="btn btn-primary" (click)="searchRide()">Search</button></span></a>-->
+  <a href="./ride-list"><span>Display All Rides</span></a>
+
+</div>
+  <div class="text-center">
+    <h2 class="Pride"><strong>You have a car ?</strong></h2>
+  <h5 class="Pride"><strong>Save money on your trips, post a carpooling ad !</strong></h5>
+
+    <a href="/first"><span>Offer seats</span></a>
+    <a href="/distance"><span>search seats</span></a>
+
+    <style>
+      a {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 20px; /* Arrondir les coins */
+        background-color: var(--clr, #87CEEB); /* Couleur de fond avec la possibilité de personnaliser */
+        text-decoration: none; /* Supprimer le soulignement du lien */
+        color: #fff; /* Couleur du texte */
+        transition: background-color 0.3s ease; /* Transition fluide */
+      }
+
+      a:hover {
+        background-color: #0c0; /* Changer la couleur de fond au survol */
+      }
+
+      a span {
+        pointer-events: none; /* Empêcher le span de réagir aux événements de la souris */
+      }
+    </style>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-header">
+          <h5>image Section</h5>
+        </div>
+        <div class="card-body">
+          <!--<h5 class="card-title">Search, click and book!</h5>-->
+          <p class="card-text">
+
+
+            Adding car images improves the user experience, allowing users to personalize their vehicle profiles with visual representations of their cars, enhancing engagement and trust
+
+<div><a href="/register-image"><span>Add Image</span></a></div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-header">
+
+          <h5 >Car Section</h5>
+        </div>
+        <div class="card-body">
+         <!-- <h5 class="card-title">Travel with confidence</h5>-->
+          <div><a href="/register-car"><span>Add Car</span></a></div>
+          <p class="card-text">
+
+            Experience worry-free rides in our shared cars—modern, comfortable, and secure. Our fleet ensures a smooth journey, whether it's a short trip or a long-haul adventure. Travel with ease and confidence, knowing you're in good hands
+          <div><a href="/car-list"><span>Display Cars</span></a></div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-header">
+         <h5>Your favourite journeys at low prices </h5>
+        </div>
+        <div class="card-body">
+         <!-- <h5 class="card-title">Your favourite journeys at low prices</h5>-->
+          <p class="card-text">
+
+            Wherever you're going, find the perfect ride from our wide range of budget destinations.</p>
+         <!-- <a href="#" class="btn btn-primary">Go somewhere</a>-->
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<app-footer-front></app-footer-front>
+<script>
+  let btns = document.querySelectorAll("a");
+  btns.forEach(btn => {
+    btn.addEventListener("mousemove", function(e) {
+      let x = e.pageX - btn.offsetLeft;
+      let y = e.pageY - btn.offsetTop;
+      btn.style.setProperty("--x", x + "px");
+      btn.style.setProperty("--y", y + "px");
+    });
+  });
+
+</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

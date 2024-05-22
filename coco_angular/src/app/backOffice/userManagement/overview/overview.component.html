@@ -1,0 +1,73 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Users Overview</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/admin">Home</a></li>
+        <li class="breadcrumb-item">Tables</li>
+        <li class="breadcrumb-item active">Users</li>
+      </ol>
+    </nav>
+  </div>
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Users Table</h5>
+            <p>This table displays a list of all users. Admins can perform various actions such as edit or delete.</p>
+
+            <!-- Search Bar -->
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search users..." [(ngModel)]="searchTerm" (input)="onSearchTermChange(searchTerm)">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="bi bi-search"></i></span>
+              </div>
+            </div>
+
+            <!-- Table with stripped rows -->
+            <table class="table datatable">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">Date of Birth</th>
+                  <th scope="col">Phone Number</th>
+                  <th scope="col">Roles</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of users; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ user.username }}</td>
+                  <td>{{ user.email }}</td>
+                  <td>{{ user.gender }}</td>
+                  <td>{{ user.dateOfBirth | date:'shortDate' }}</td>
+                  <td>{{ user.phoneNumber }}</td>
+                  <td>
+                    <ng-container *ngFor="let role of user.roles; let j = index">
+                      {{ role.name }}<span *ngIf="j < user.roles.length - 1">, </span>
+                    </ng-container>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer-back></app-footer-back>

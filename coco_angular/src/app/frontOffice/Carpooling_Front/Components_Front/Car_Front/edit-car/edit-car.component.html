@@ -1,0 +1,52 @@
+<app-header-front></app-header-front>
+
+
+<main id="main" class="main">
+
+
+  <div class="container-fluid">
+
+    <div class="card" style="width: 50%;margin: 5px auto;">
+      <div class="card-header">
+        Edit Car
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="carID">carID</label>
+            <input [(ngModel)]="car.carID" id="carID" name="carID" class="form-control" type="text">
+          </div>
+
+
+          <div class="form-group">
+            <label for="model">model</label>
+            <input [(ngModel)]="car.model" id="model" name="model" class="form-control" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="comfort">comfort</label>
+            <input [(ngModel)]="car.comfort" id="comfort" name="comfort" class="form-control" type="text">
+          </div>
+          <!-- <div class="form-group">
+             <label for="rideID">rideID</label>
+             <input [(ngModel)]="car.ride.rideID" id="rideID" name="rideID" class="form-control" type="text">
+           </div>-->
+
+          <button class="btn btn-primary" (click)="updateCar()">Update</button>
+        </form>
+      </div>
+      <div class="card-footer" *ngIf="showAlert">
+        <div class="alert alert-success">
+          <button (click)="closeAlert()" class="close">
+            &times;
+          </button>
+          <strong>Success</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</main>
+<app-footer-front></app-footer-front>
+

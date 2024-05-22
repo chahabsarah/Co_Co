@@ -1,0 +1,43 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 5px;
+}
+
+.card-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #ccc;
+  padding: 10px 20px;
+}
+
+.card-footer button {
+  margin-left: 10px;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-transparent:focus {
+  outline: none;
+}
+
+.btn-transparent svg {
+  color: #6c757d;
+}

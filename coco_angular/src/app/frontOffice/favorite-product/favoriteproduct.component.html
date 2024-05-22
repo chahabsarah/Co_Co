@@ -1,0 +1,21 @@
+<app-header-front></app-header-front>
+
+<div class="container">
+    <h2>Your Favorite Products</h2>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let product of favoriteProducts">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text"><strong>Price:</strong> {{product.price}}</p>
+                    <p class="card-text"><strong>Type:</strong> {{product.typeProduct}}</p>
+                    <!-- Ajoutez d'autres détails du produit ici selon vos besoins -->
+                    <button class="btn btn-danger" (click)="deleteProduct(product.idProduct)">Delete</button>
+                    <!--<i class="fas fa-trash" (click)="deleteProduct(product.idProduct)"></i>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer-back></app-footer-back>

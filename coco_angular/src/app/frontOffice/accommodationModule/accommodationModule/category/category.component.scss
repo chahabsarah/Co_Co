@@ -1,0 +1,88 @@
+// /* Style général du formulaire */
+// form {
+//     margin-top: 20px;
+//     padding: 20px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     background-color: #f9f9f9;
+//   }
+
+//   /* Style des étiquettes des champs */
+//   label {
+//     font-weight: bold;
+//   }
+
+//   /* Style des champs de saisie */
+//   input[type="text"],
+//   input[type="email"] {
+//     width: 100%;
+//     padding: 8px;
+//     margin-bottom: 10px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     box-sizing: border-box; /* Pour inclure le padding et la bordure dans la largeur */
+//   }
+
+//   /* Style des boutons */
+//   button {
+//     margin-top: 10px;
+//     padding: 8px 20px;
+//     border: none;
+//     border-radius: 4px;
+//     background-color: #007bff;
+//     color: white;
+//     cursor: pointer;
+//   }
+
+//   button:hover {
+//     background-color: #0056b3;
+//   }
+
+
+
+  /* Ajoute des styles personnalisés au tableau */
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Ajoute des styles au bouton Add Sub-Category */
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Ajoute des styles aux boutons Delete et Update */
+.btn-danger, .btn-warning {
+  color: #fff;
+}
+
+.btn-danger:hover, .btn-warning:hover {
+  color: #fff;
+}
+a {
+  background-color:#05bbf2 ;
+  border-color: #05bbf2;
+  color:white;
+  border-width: 3px;
+  border-radius: 10px;
+}
+.bi-trash3{
+  fill :red;
+}
+.bi-pencil {
+  fill: #052077;
+}
+.bi-eye{
+  fill: #FFA500;
+}

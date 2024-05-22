@@ -1,0 +1,46 @@
+/* Ajoute des styles personnalisés au tableau */
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Ajoute des styles au bouton Add Sub-Category */
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Ajoute des styles aux boutons Delete et Update */
+.btn-danger, .btn-warning {
+    color: #fff;
+}
+
+.btn-danger:hover, .btn-warning:hover {
+    color: #fff;
+}
+a {
+  background-color:#05bbf2 ;
+  border-color: #05bbf2;
+  color:white;
+  border-width: 3px;
+  border-radius: 10px;
+}
+.bi-trash3{
+  fill :red;
+}
+.bi-pencil {
+  fill: #052077;
+}
+.bi-eye{
+  fill: #FFA500;
+}

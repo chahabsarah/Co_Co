@@ -1,0 +1,17 @@
+<app-header-front></app-header-front>
+
+<main id="main" class="main">
+
+<div *ngIf="accomodation" class="card mt-8" style="width:700px;margin-left:5%">
+  <div class="card-body">
+    <h2 class="card-title">{{accomodation.accommodationName}} </h2>
+    <img class="file-image" [src]="'http://localhost:8085/spring2024/api/accommodations/' + accomodation.accommodationID + '/image'" (click)="openImage(accomodation.imageName)"style="width:700px ;">
+    <p class="card-text">Number Of Room: {{ accomodation.numberOfRoom }}</p>
+    <p class="card-text">Localisation: {{ accomodation.localisation }}</p>
+    <p class="card-text">Rules: {{ accomodation.rules }}</p>
+    <p class="card-text">Price: {{ accomodation.rent_price }}</p>
+    <button class="btn btn-success">Book an appointment</button>
+  </div>
+</div>
+</main>
+<app-footer-front></app-footer-front>

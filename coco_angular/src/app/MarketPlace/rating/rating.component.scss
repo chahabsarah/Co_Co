@@ -1,0 +1,27 @@
+ngb-rating{
+  color: #FFC107;
+  font-size:90px
+}
+.rating-container,
+.output-container {
+  text-align: center;
+}
+
+.input-heading,
+.output-heading,
+.final-rating,
+.rating-users {
+  font-size: 16px; /* Taille du texte */
+  color: #0c8b7d; /* Couleur du texte */
+  font-family: Arial, sans-serif; /* Police de caractères */
+}
+
+.user-count {
+  font-weight: bold; /* Texte en gras */
+}
+
+.input-rating,
+.output-rating {
+  font-size: 30px; /* Taille des étoiles */
+}
+

@@ -1,0 +1,45 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<main id="main" class="main">
+  <form [formGroup]="tripForm" (ngSubmit)="updateTrip()">
+    <div class="form-group">
+      <label for="departureLocation">Departure Location</label>
+      <input type="text" class="form-control" formControlName="departureLocation" id="departureLocation" placeholder="Departure Location">
+      <div class="alert alert-danger" *ngIf="tripForm.controls['departureLocation'].invalid && tripForm.controls['departureLocation'].touched">
+        <p *ngIf="tripForm.controls['departureLocation'].hasError('required')">Departure Location is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="arrivalLocation">Arrival Location</label>
+      <input type="text" class="form-control" formControlName="arrivalLocation" id="arrivalLocation" placeholder="Arrival Location">
+      <div class="alert alert-danger" *ngIf="tripForm.controls['arrivalLocation'].invalid && tripForm.controls['arrivalLocation'].touched">
+        <p *ngIf="tripForm.controls['arrivalLocation'].hasError('required')">Arrival Location is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="estimatedDuration">Estimated Duration</label>
+      <input type="text" class="form-control" formControlName="estimatedDuration" id="estimatedDuration" placeholder="Estimated Duration">
+      <div class="alert alert-danger" *ngIf="tripForm.controls['estimatedDuration'].invalid && tripForm.controls['estimatedDuration'].touched">
+        <p *ngIf="tripForm.controls['estimatedDuration'].hasError('required')">Estimated Duration is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="fare">Fare</label>
+      <input type="text" class="form-control" formControlName="fare" id="fare" placeholder="Fare">
+      <div class="alert alert-danger" *ngIf="tripForm.controls['fare'].invalid && tripForm.controls['fare'].touched">
+        <p *ngIf="tripForm.controls['fare'].hasError('required')">Fare is required</p>
+      </div>
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-primary" [disabled]="tripForm.invalid">Update</button>
+  </form>
+</main>
+
+<app-footer-back></app-footer-back>
+

@@ -1,0 +1,72 @@
+
+  /* Style for the search input */
+  .search-input {
+    max-width: 500px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 20%;
+  }
+
+  /* Style for the price range input */
+  #priceRange {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  /* Style for the room cards */
+  .card {
+    margin-bottom: 20px;
+  }
+
+  /* Style for the carousel controls */
+  .btn-prev,
+  .btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  /* Style for the room type and price tag */
+  .room-type,
+  .price-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  /* Style for the card body */
+  .card-body {
+    padding: 1rem;
+  }
+
+  /* Style for the card footer */
+  .card-footer {
+    padding: 1rem;
+    text-align: center;
+    height: 50px;
+  }
+
+  /* Style for the buttons in the card footer */
+  .btn-transparent {
+    background-color: transparent;
+    border: none;
+    margin-right: 1rem;
+    color: blue; /* Change the color to your desired color */
+  }
+
+  /* Style for the buttons in the card footer on hover */
+  .btn-transparent:hover {
+    color: red; /* Change the color to your desired color */
+  }
+

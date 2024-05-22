@@ -1,0 +1,10 @@
+export enum Role {
+    ADMIN = 'ADMIN',
+    USER = 'USER',
+    DRIVER = 'DRIVER',
+    PASSENGER = 'PASSENGER',
+    HOST = 'HOST',
+    ROOMSEEKER = 'ROOMSEEKER',
+    DELIVERY = 'DELIVERY',
+    EXTERNAL_USER = 'EXTERNAL_USER'
+}

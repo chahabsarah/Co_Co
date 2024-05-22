@@ -1,0 +1,67 @@
+<app-header-front></app-header-front>
+<main class="profile-page">
+  <section class="section-profile-cover section-shaped my-0">
+    <!-- Background image can be added here -->
+    <div class="shape shape-style-1 shape-primary">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="card card-profile shadow mt--300">
+        <div class="px-4">
+          <div class="row justify-content-center">
+            <div class="col-lg-3 order-lg-2">
+              <div class="card-profile-image">
+                <a href="javascript:;">
+                  <img src="{{ user.pictureUrl || 'assets/default-profile.jpg' }}" class="rounded-circle">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
+              <div class="card-profile-actions py-4 mt-lg-0">
+                <button class="btn btn-primary mr-4" (click)="toggleEdit()">Edit Profile</button>
+                <button class="btn btn-default float-right" *ngIf="isEditing" (click)="saveProfile()">Save Changes</button>
+                <button class="btn btn-secondary float-right" *ngIf="isEditing" (click)="toggleEdit()">Cancel</button>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-5">
+            <h3>{{ user.username }}</h3>
+            <div class="h6 font-weight-300"><i class="ni location_pin mr-2"></i>{{ user.email }}</div>
+            <div class="h6 mt-4"><i class="ni business_briefcase-24 mr-2"></i>{{ user.gender }}, Date of Birth: {{ user.dateOfBirth | date:'longDate' }}</div>
+            <div><i class="ni education_hat mr-2"></i>{{ user.address }}</div>
+            <div><i class="ni mobile-button mr-2"></i>{{ user.phoneNumber }}</div>
+          </div>
+          <div class="mt-5 py-5 border-top text-center" *ngIf="isEditing">
+            <div class="row justify-content-center">
+              <div class="col-lg-9">
+                <form (ngSubmit)="saveProfile()">
+                  <div class="form-group">
+                    <label for="pictureUrl">Profile Picture URL</label>
+                    <input type="text" class="form-control" id="pictureUrl" [(ngModel)]="user.pictureUrl" name="pictureUrl">
+                  </div>
+                  <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" [(ngModel)]="user.username" name="username">
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" [(ngModel)]="user.address" name="address">
+                  </div>
+                  <div class="form-group">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" class="form-control" id="birthday" [(ngModel)]="user.dateOfBirth" name="dateOfBirth">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
+                  <button type="button" class="btn btn-secondary" (click)="toggleEdit()">Cancel</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer-front></app-footer-front>

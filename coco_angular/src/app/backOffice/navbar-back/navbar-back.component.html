@@ -1,0 +1,453 @@
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+                <!--component elli teb3in amal -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#user-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-people"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="user-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a routerLink="/overview">
+              <i class="bi bi-circle"></i><span>User Overview</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/profile">
+              <i class="bi bi-person"></i><span>Profile</span>
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="/role-stats">
+              <i class="bi bi-person"></i><span>role stats</span>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+              <!-- end component elli teb3in amal -->
+
+              <!--component elli teb3in amir -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#carpool-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-car-front"></i><span>Carpool Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="carpool-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a routerLink="/car">
+              <i class="bi bi-circle"></i><span>car</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/driver">
+              <i class="bi bi-circle"></i><span>drivers</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+              <!-- end component elli teb3in amir -->
+
+              <!--component elli teb3in sysy -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#marketplace-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-shop"></i><span>MarketPlace Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="marketplace-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+
+            <a routerLink="/category-list">
+              <i class="bi bi-circle"></i><span>category</span>
+            </a>
+          </li>
+          <li>
+
+            <a routerLink="/register-category-product">
+              <i class="bi bi-circle"></i><span>Add category</span>
+            </a>
+          </li>
+          <li>
+
+            <a routerLink="edit-category-product/:idCategory">
+              <i class="bi bi-circle"></i><span>Editcategory</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/subcategory-list">
+              <i class="bi bi-circle"></i><span>Subcategory</span>
+            </a>
+
+          </li>
+          <li>
+            <a routerLink="/register-subcategory">
+              <i class="bi bi-circle"></i><span>Add Subcategory</span>
+            </a>
+
+          </li>
+          <li>
+            <a routerLink="/edit-subcategory-product/:idSubCategory">
+              <i class="bi bi-circle"></i><span>Edit Subcategory</span>
+            </a>
+
+          </li>
+          <li>
+            <a routerLink="addcattosub/:idCategory/subcategories">
+              <i class="bi bi-circle"></i><span>Affect Subcategory To Category</span>
+            </a>
+
+          </li>
+          <li>
+            <a routerLink="/product">
+              <i class="bi bi-circle"></i><span>product</span>
+            </a>
+           
+          </li>
+
+          <li>
+
+            <a routerLink="/addpicturetoproduct">
+              <i class="bi bi-circle"></i><span>Affect</span>
+            </a>
+          </li>
+          <li>
+
+            <a routerLink="/edit-product/:idProduct">
+              <i class="bi bi-circle"></i><span>Edit Product</span>
+            </a>
+          </li>
+          <li>
+
+            <a routerLink="/register-product">
+              <i class="bi bi-circle"></i><span>Add Product</span>
+            </a>
+          </li>
+
+        </ul>
+              <!-- end component elli teb3in sysy -->
+
+              <!--component elli teb3in hadill -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#accommodation-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-house-door"></i><span>Accommodation Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="accommodation-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a routerLink="/room">
+              <i class="bi bi-circle"></i><span>Room</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/accomodation">
+              <i class="bi bi-circle"></i><span>Accommodation</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/cat">
+              <i class="bi bi-circle"></i><span>Category</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/subcat">
+              <i class="bi bi-circle"></i><span>SubCategory</span>
+            </a>
+          </li>
+          
+          
+        </ul>
+      </li>
+              <!-- end component elli teb3in hadil -->
+
+              <!--component elli teb3in achref -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#bus-management-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-geo-alt"></i><span>Bus Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="bus-management-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a routerLink="/bus">
+              <i class="bi bi-circle"></i><span>bus</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/add-bus">
+              <i class="bi bi-circle"></i><span> add bus</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/stop">
+              <i class="bi bi-circle"></i><span>stop</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/add-stop">
+              <i class="bi bi-circle"></i><span> add stop</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/trip">
+              <i class="bi bi-circle"></i><span>trip</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/add-trip">
+              <i class="bi bi-circle"></i><span> add trip</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/tripStop">
+              <i class="bi bi-circle"></i><span>tripStop</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/add-tripStop">
+              <i class="bi bi-circle"></i><span> add tripStop</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/checksub">
+              <i class="bi bi-circle"></i><span> Check Sub</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+              <!-- end component elli teb3in ghribii -->
+
+              <!--component elli teb3in ramsys -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#blog-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>CoCo Blog</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="blog-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a routerLink="/post">
+              <i class="bi bi-circle"></i><span>posts</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/comment">
+              <i class="bi bi-circle"></i><span>comments</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+              <!-- end component elli teb3in ramsys -->
+
+              <!--<li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="components-alerts.html">
+              <i class="bi bi-circle"></i><span>Alerts</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-accordion.html">
+              <i class="bi bi-circle"></i><span>Accordion</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-badges.html">
+              <i class="bi bi-circle"></i><span>Badges</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-breadcrumbs.html">
+              <i class="bi bi-circle"></i><span>Breadcrumbs</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-buttons.html">
+              <i class="bi bi-circle"></i><span>Buttons</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-cards.html">
+              <i class="bi bi-circle"></i><span>Cards</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-carousel.html">
+              <i class="bi bi-circle"></i><span>Carousel</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-list-group.html">
+              <i class="bi bi-circle"></i><span>List group</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-modal.html">
+              <i class="bi bi-circle"></i><span>Modal</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-tabs.html">
+              <i class="bi bi-circle"></i><span>Tabs</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-pagination.html">
+              <i class="bi bi-circle"></i><span>Pagination</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-progress.html">
+              <i class="bi bi-circle"></i><span>Progress</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-spinners.html">
+              <i class="bi bi-circle"></i><span>Spinners</span>
+            </a>
+          </li>
+          <li>
+            <a href="components-tooltips.html">
+              <i class="bi bi-circle"></i><span>Tooltips</span>
+            </a>
+          </li>
+        </ul>
+      </li>-->
+      <!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a routerLink="/form-elements">
+              <i class="bi bi-circle"></i><span>Form Elements</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/form-layouts">
+              <i class="bi bi-circle"></i><span>Form Layouts</span>
+            </a>
+          </li>
+          
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a routerLink="/table">
+              <i class="bi bi-circle"></i><span>Tables</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a routerLink="/chartjs">
+              <i class="bi bi-circle"></i><span>Chart.js</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/apexcharts">
+              <i class="bi bi-circle"></i><span>ApexCharts</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/echarts">
+              <i class="bi bi-circle"></i><span>ECharts</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Charts Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="icons-bootstrap.html">
+              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-remix.html">
+              <i class="bi bi-circle"></i><span>Remix Icons</span>
+            </a>
+          </li>
+          <li>
+            <a href="icons-boxicons.html">
+              <i class="bi bi-circle"></i><span>Boxicons</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Icons Nav -->
+
+      <li class="nav-heading">Pages</li>
+
+      <!--<li class="nav-item">
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </li> End Profile Page Nav -->
+
+      <!--<li class="nav-item">
+        <a class="nav-link collapsed" href="pages-faq.html">
+          <i class="bi bi-question-circle"></i>
+          <span>F.A.Q</span>
+        </a>
+      </li> End F.A.Q Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-contact.html">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <!--<li class="nav-item">
+        <a class="nav-link collapsed" href="pages-register.html">
+          <i class="bi bi-card-list"></i>
+          <span>Register</span>
+        </a>
+      </li> End Register Page Nav -->
+
+      <!--<li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Login</span>
+        </a>
+      </li> End Login Page Nav -->
+
+      <!--<li class="nav-item">
+        <a class="nav-link collapsed" href="pages-error-404.html">
+          <i class="bi bi-dash-circle"></i>
+          <span>Error 404</span>
+        </a>
+      </li> End Error 404 Page Nav -->
+
+      <!--<li class="nav-item">
+        <a class="nav-link collapsed" href="pages-blank.html">
+          <i class="bi bi-file-earmark"></i>
+          <span>Blank</span>
+        </a>
+      </li> End Blank Page Nav -->
+
+    </ul>
+
+  </aside>

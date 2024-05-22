@@ -1,0 +1,58 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<main id="main" class="main">
+<div class="ex-form-1 pt-5 pb-5">
+  <div>
+    <div class="row">
+      <div class="col-xl-6 offset-xl-3">
+        <div class="text-box mt-5 mb-5">
+          <form #f="ngForm" (ngSubmit)="add(f); formSubmitted = true;">
+            <div class="mb-4 form-floating">
+              <input type="file" class="form-control" id="images" name="images" accept="image/*" (change)="onFileSelect($event)" multiple>
+              <label for="images">Select Images</label>
+            </div>
+
+            <div class="mb-4 form-floating">
+              <select class="form-select" id="accommodation" name="accommodation" [(ngModel)]="selectedAccommodationId" required>
+                <option value="" disabled selected>Select Accommodation</option>
+                <option *ngFor="let accommodation of accomodations" [ngValue]="accommodation.accommodationID">{{ accommodation.accommodationName }}</option>
+              </select>
+              <label for="accommodation">Accommodation</label>
+            </div>
+            <div class="mb-4 form-floating">
+              <select class="form-select" id="roomType" name="roomType" [(ngModel)]="room.roomType" required>
+                <option value="" disabled selected>Select Room Type</option>
+                <option value="Simple">Simple</option>
+                <option value="Double">Double</option>
+                <option value="Twin">Twin</option>
+              </select>
+              <label for="roomType">Room Type</label>
+            </div>
+            <div class="mb-4 form-floating">
+              <input type="number" class="form-control" id="rent" name="rent" [(ngModel)]="room.rent" required>
+              <label for="rent">Rent</label>
+            </div>
+            <div class="mb-4 form-floating">
+              <input type="text" class="form-control" id="amenities" name="amenities" [(ngModel)]="room.amenities" required>
+              <label for="amenities">Amenities</label>
+            </div>
+            <div class="mb-4 form-floating">
+              <input type="text" class="form-control" id="roomDetails" name="roomDetails" [(ngModel)]="room.roomDetails" required>
+              <label for="roomDetails">Room Details</label>
+            </div>
+            <form [formGroup]="aFormGroup" class="recaptcha-form">
+              <ngx-recaptcha2 #captchaElem
+                [siteKey]="siteKey"
+                formControlName="recaptcha">
+              </ngx-recaptcha2>
+            </form>
+            <button type="submit" class="form-control-submit-button">Add Room</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<app-footer-back></app-footer-back>

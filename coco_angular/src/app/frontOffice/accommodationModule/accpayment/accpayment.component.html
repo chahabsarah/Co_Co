@@ -1,0 +1,42 @@
+<app-header-front></app-header-front>
+
+<div class="payment-container" style="margin-bottom: 100px;">
+    <div class="payment-details">
+      <h2>Payment Details</h2>
+      <p><strong>Username:</strong> {{ currentUser.username }}</p>
+      <p><strong>Email:</strong> {{ currentUser.email }}</p>
+      <p><strong>Sold:</strong> {{ solds }}TND</p>
+
+      <p><strong>Booking price:</strong> {{ bookingPrice }}TND</p>
+
+
+
+
+    </div>
+    <button class="payment-button" (click)="initiatePayment()">Proceed with Payment</button>
+    <button class="btn btn-danger" *ngIf="paymentSuccessful" (click)="generatePDF()"><i class="bi bi-file-pdf"></i>PDF</button>
+
+    <div *ngIf="paymentSuccessful" class="flash-message success">
+      <p>Payment successful!</p>
+      <p>Thank you for your payment.</p>
+    </div>
+    <div *ngIf="insufficientBalance" class="alert alert-danger" role="alert">
+      Solde insuffisant. Veuillez recharger votre compte.
+    </div>
+
+    <div *ngIf="paymentFailed" class="flash-message error">
+      <p>Payment failed!</p>
+      <p>Please try again later.</p>
+    </div>
+
+</div>
+<app-footer-front></app-footer-front>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Activation du carrousel pour chaque élément
+  $('[id^="roomCarousel"]').each(function () {
+    $(this).carousel();
+  });
+</script>

@@ -1,0 +1,62 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<main id="main" class="main">
+
+  <div class="pagetitle">
+    <h1>Comment List</h1>
+  </div><!-- End Page Title -->
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Comment List</h5>
+
+            <!-- Table with dark header and stripped rows -->
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover datatable">
+                <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Comment ID</th>
+                  <th scope="col">Content</th>
+                  <th scope="col">Created Date</th>
+                  <th scope="col">Update Date</th>
+                  <th scope="col">Post</th>
+                  <th scope="col">User</th>
+                  <th scope="col">Parent Comment</th>
+                  <th scope="col">Replies</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let comment of comments">
+                  <td>{{ comment?.commentId }}</td>
+                  <td>{{ comment?.content }}</td>
+                  <td>{{ comment?.createdDate | date:'medium' }}</td>
+                  <td>{{ comment?.updateDate | date:'medium' }}</td>
+                  <td>{{ comment?.post?.description }}</td>
+                  <td>{{ comment?.user?.username }}</td>
+                  <td>{{ comment?.parentComment ? comment?.parentComment?.content : 'N/A' }}</td>
+                  <td>
+                    <ul>
+                      <li *ngFor="let reply of comment?.replies">{{ reply?.content }}</li>
+                    </ul>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- End Table with dark header and stripped rows -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main><!-- End #main -->
+
+<app-footer-back></app-footer-back>

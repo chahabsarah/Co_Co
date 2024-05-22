@@ -1,0 +1,41 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+<div class="container-fluid">
+  <div class="pt-5">
+    <div class="d-flex justify-content-center">
+      <nav class="nav bg-dark ">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/category-list']">Category List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/register-category-product']"> Add Category </a>
+        </li>
+      </nav>
+    </div>
+  </div>
+  <div class="card-header" style="width: 50%;margin:10px auto">
+    <div class="card-header">
+      ADD NEW CATEGORY
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label for="CategoryName"> CategoryName </label>
+        <input [(ngModel)]="categories.categoryName" id="categoryName" class="form-control" type="text" name="categoryName" #categoryName="ngModel">
+        <div class="text-danger" *ngIf="!categories.categoryName && categoryName.touched">
+          Fill in the blanks
+        </div>
+      </div>
+      <button class="btn btn-primary" [disabled]="!categories.categoryName" (click)="saveCategory()">SAVE</button>
+    </div>
+    <div class="card-footer" *ngIf="showAlert">
+      <div class="alert alert-success" role="alert">
+        <button class="close" (click)="closeAlert()">&times;</button>
+        <strong>Successfull Saved</strong>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer-back></app-footer-back>

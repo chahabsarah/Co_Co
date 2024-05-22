@@ -1,0 +1,38 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assign Picture to Product</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form {
+      width: 300px; /* Adjust as needed */
+    }
+  </style>
+</head>
+<body>
+
+<h1>Assign Picture to Product</h1>
+
+<form (submit)="assignPicture()">
+  <label for="idproduct">Product ID:</label>
+  <input type="number" id="idproduct" name="idproduct" [(ngModel)]="idproduct" [value]="latestProductId" required>
+
+  <label for="idPicture">Picture Product ID:</label>
+  <input type="number" id="idPicture" name="idPicture" [(ngModel)]="idPicture" [value]="latestPictureId" required>
+
+  <button type="submit">Assign Picture to Product</button>
+</form>
+
+</body>
+</html>
+<app-footer-back></app-footer-back>

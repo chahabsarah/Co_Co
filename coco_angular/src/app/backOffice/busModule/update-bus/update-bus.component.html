@@ -1,0 +1,62 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<main id="main" class="main">
+  <form [formGroup]="busForm" (ngSubmit)="updateBus()">
+
+
+    <div class="form-group">
+      <label for="inputAvailability">Availability</label>
+      <input type="text" class="form-control" formControlName="availability" id="inputAvailability" placeholder="Availability">
+      <div class="alert alert-danger" *ngIf="busForm.controls['availability'].invalid && busForm.controls['availability'].touched">
+        <p *ngIf="busForm.controls['availability'].hasError('required')">Availability is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputBrand">Brand</label>
+      <input type="text" class="form-control" formControlName="brand" id="inputBrand" placeholder="Brand">
+      <div class="alert alert-danger" *ngIf="busForm.controls['brand'].invalid && busForm.controls['brand'].touched">
+        <p *ngIf="busForm.controls['brand'].hasError('required')">Brand is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputGpsCoordinates">GPS Coordinates</label>
+      <input type="text" class="form-control" formControlName="gpsCoordinates" id="inputGpsCoordinates" placeholder="GPS Coordinates">
+      <div class="alert alert-danger" *ngIf="busForm.controls['gpsCoordinates'].invalid && busForm.controls['gpsCoordinates'].touched">
+        <p *ngIf="busForm.controls['gpsCoordinates'].hasError('required')">GPS Coordinates is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputLicensePlateNumber">License Plate Number</label>
+      <input type="text" class="form-control" formControlName="licensePlateNumber" id="inputLicensePlateNumber" placeholder="License Plate Number">
+      <div class="alert alert-danger" *ngIf="busForm.controls['licensePlateNumber'].invalid && busForm.controls['licensePlateNumber'].touched">
+        <p *ngIf="busForm.controls['licensePlateNumber'].hasError('required')">License Plate Number is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputModel">Model</label>
+      <input type="text" class="form-control" formControlName="model" id="inputModel" placeholder="Model">
+      <div class="alert alert-danger" *ngIf="busForm.controls['model'].invalid && busForm.controls['model'].touched">
+        <p *ngIf="busForm.controls['model'].hasError('required')">Model is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputSeatingCapacity">Seating Capacity</label>
+      <input type="number" class="form-control" formControlName="seatingCapacity" id="inputSeatingCapacity" placeholder="Seating Capacity">
+      <div class="alert alert-danger" *ngIf="busForm.controls['seatingCapacity'].invalid && busForm.controls['seatingCapacity'].touched">
+        <p *ngIf="busForm.controls['seatingCapacity'].hasError('required')">Seating Capacity is required</p>
+      </div>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</main>
+
+<app-footer-back></app-footer-back>

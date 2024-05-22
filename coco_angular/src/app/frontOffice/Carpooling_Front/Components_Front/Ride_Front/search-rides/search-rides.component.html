@@ -1,0 +1,42 @@
+
+<div *ngIf="searchResults">
+  <ul>
+    <li *ngFor="let s of searchResults">
+      <div class="card border-primary mb-3 shadow"> <!-- Réduit la marge inférieure et la taille de l'ombre -->
+        <img class="card-img-top" src="../../../assets/frontOffice/img/polo.jpg" alt="Card image cap" style="max-height: 150px;"> <!-- Ajuste la taille de l'image -->
+        <div class="card-body p-2"> <!-- Réduit le remplissage autour du contenu -->
+          <h6 class="card-title"><strong>start Location:</strong>{{s.startLocation}}</h6>
+          <h6 class="card-title"><strong>arrival Address:</strong>{{s.arrivalAddress}}</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item p-1"> <!-- Réduit le remplissage des éléments de la liste -->
+              <strong>Avoid Tolls:</strong> {{s.avoidTolls ? 'Yes' : 'No'}}
+            </li>
+            <li class="list-group-item p-1">
+              <strong>Smoking Friendly:</strong> {{s.smoking_Vehicle ? 'Yes' : 'No'}}
+            </li>
+            <li class="list-group-item p-1">
+              <strong>Preference:</strong> {{s.preference}}
+            </li>
+            <li class="list-group-item p-1">
+              <strong>Time:</strong> {{s.time}}
+            </li>
+            <li class="list-group-item p-1">
+              <strong>Departure Date:</strong> {{s.departureDate}}
+            </li>
+            <li class="list-group-item p-1">
+              <strong>Price:</strong> {{s.price}}
+            </li>
+            <li class="list-group-item p-1">
+              <strong>Available Seats:</strong> {{s.placeDisponible}}
+            </li>
+          </ul>
+          <p class="card-text p-2">This Ride is yours</p> <!-- Réduit le remplissage autour du texte -->
+        </div>
+        <div class="card-footer bg-transparent border-primary d-flex justify-content-between align-items-center">
+          <button class="btn btn-warning btn-sm" [routerLink]="['/acceuil']">Return</button> <!-- Ajoute la classe btn-sm pour rendre le bouton plus petit -->
+          <button type="button" class="btn btn-success btn-sm" >Book now</button> <!-- Ajoute la classe btn-sm pour rendre le bouton plus petit -->
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

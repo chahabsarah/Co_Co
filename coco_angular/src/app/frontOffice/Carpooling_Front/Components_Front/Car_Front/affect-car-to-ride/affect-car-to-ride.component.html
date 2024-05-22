@@ -1,0 +1,36 @@
+<app-header-front></app-header-front>
+
+
+<main id="main" class="main">
+  <form #form="ngForm" (ngSubmit)="affect(form)">
+
+
+
+
+    <div class="text-center"> <!-- Centrer le bouton -->
+      <button type="submit" class="btn btn-primary btn-lg rounded-pill" (click)="showRides()">Display Rides</button> <!-- Ajouter des classes pour le style -->
+    </div><div>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-light">
+    <tr>
+      <th>Start Location</th>
+      <th>Arrival Address</th>
+      <th>Available Seats</th>
+      <th>Affect</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let s of rides">
+      <td>{{ s.startLocation }}</td>
+      <td>{{ s.arrivalAddress }}</td>
+      <td>{{ s.placeDisponible }}</td>
+      <button class="btn btn-info" (click)="affectCar(s.rideID)">Affect Car</button>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+  </form>
+</main>
+<app-footer-front></app-footer-front>

@@ -1,0 +1,20 @@
+<app-header-front></app-header-front>
+
+<div *ngIf="currentUser">
+<div class="x">
+  <h2 style="text-align: center;font-weight:bold">Bienvenue, {{ currentUser.username }}!</h2>
+</div>
+<div class="hedil">
+  <div *ngIf="currentSold" class="sold-card">
+    <h1>Sold : {{ currentSold.accountSold }}</h1>
+  </div>
+
+
+  <div class="add-sold-card">
+    <input class="form-control" type="number" id="newSoldValue" name="newSoldValue" [(ngModel)]="newSoldValue" placeholder="enter your sold here!" />
+    <br>
+    <button class="btn btn-primary" (click)="addSold()">Add sold</button>
+  </div>
+</div>
+
+</div>

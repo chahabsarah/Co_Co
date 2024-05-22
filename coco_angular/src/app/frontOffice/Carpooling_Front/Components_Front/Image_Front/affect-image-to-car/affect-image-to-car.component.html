@@ -1,0 +1,20 @@
+<app-header-front></app-header-front>
+
+
+<main id="main" class="main">
+  <form #form="ngForm" (ngSubmit)="affect(form)">
+    <div class="form-group">
+      <label for="imageID">Image ID:</label>
+      <input type="number" class="form-control" id="imageID" name="imageID" [(ngModel)]="imageID" required>
+    </div>
+    <div class="form-group">
+      <label for="carID">Car ID:</label>
+      <input type="number" class="form-control" id="carID" name="carID" [(ngModel)]="carID" required>
+    </div>
+    <button type="submit" class="btn btn-primary" >Affect</button>
+    <li class="nav-item">
+      <!-- <a class="nav-link" [routerLink]="['/coco']">home</a>-->
+    </li>
+  </form>
+</main>
+<app-footer-front></app-footer-front>

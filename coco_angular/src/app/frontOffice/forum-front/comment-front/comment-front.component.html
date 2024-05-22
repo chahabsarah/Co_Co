@@ -1,0 +1,19 @@
+<app-header-front></app-header-front>
+<div class="container mt-4">
+    <h2 class="mb-4">Post</h2>
+    <div class="card" *ngIf="post">
+      <div class="card-body">
+        <h2 class="card-title">{{ post.description }}</h2>
+        <p class="card-text created-date">Created on: {{ post.createdDate | date: 'medium' }}</p>
+
+        <div class="button-group mt-3">
+        </div>
+
+<div *ngIf="comments && comments.length > 0">
+  <h3>Comments</h3>
+  <ul>
+    <li *ngFor="let comment of comments">
+      <p>{{ comment.content }}</p>
+    </li>
+  </ul>
+</div>

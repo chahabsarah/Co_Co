@@ -1,0 +1,45 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<main id="main" class="main">
+  <form [formGroup]="TripForm" (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="inputDepartureLocation">Departure Location</label>
+      <input type="text" class="form-control" formControlName="departureLocation" id="inputDepartureLocation" placeholder="Departure Location">
+      <div class="alert alert-danger" *ngIf="TripForm.controls['departureLocation'].invalid && TripForm.controls['departureLocation'].touched">
+        <p *ngIf="TripForm.controls['departureLocation'].hasError('required')">Departure Location is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputArrivalLocation">Arrival Location</label>
+      <input type="text" class="form-control" formControlName="arrivalLocation" id="inputArrivalLocation" placeholder="Arrival Location">
+      <div class="alert alert-danger" *ngIf="TripForm.controls['arrivalLocation'].invalid && TripForm.controls['arrivalLocation'].touched">
+        <p *ngIf="TripForm.controls['arrivalLocation'].hasError('required')">Arrival Location is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputEstimatedDuration">Estimated Duration</label>
+      <input type="text" class="form-control" formControlName="estimatedDuration" id="inputEstimatedDuration" placeholder="Estimated Duration">
+      <div class="alert alert-danger" *ngIf="TripForm.controls['estimatedDuration'].invalid && TripForm.controls['estimatedDuration'].touched">
+        <p *ngIf="TripForm.controls['estimatedDuration'].hasError('required')">Estimated Duration is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputFare">Fare</label>
+      <input type="number" class="form-control" formControlName="fare" id="inputFare" placeholder="Fare">
+      <div class="alert alert-danger" *ngIf="TripForm.controls['fare'].invalid && TripForm.controls['fare'].touched">
+        <p *ngIf="TripForm.controls['fare'].hasError('required')">Fare is required</p>
+      </div>
+    </div>
+
+    <!-- Add more form fields for other trip properties -->
+
+    <button type="submit" class="btn btn-primary" [disabled]="TripForm.invalid">Submit</button>
+  </form>
+</main>
+
+<app-footer-back></app-footer-back>
+

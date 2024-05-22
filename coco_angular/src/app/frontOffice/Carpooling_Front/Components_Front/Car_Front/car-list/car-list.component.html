@@ -1,0 +1,55 @@
+<app-header-front></app-header-front>
+
+
+<!--<main id="main" class="main">
+  <div class="container-fluid">
+    <table class="table table-light">
+      <thead class="thead-light">
+      <tr>
+        <th>model</th>
+        <th>comfort</th>
+        <th>_____________Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of cars ">
+
+        <td>{{s.model}}</td>
+        <td>{{s.comfort}}</td>
+        <td>
+          <button class="btn btn-warning" style="margin-right: 5px;"
+                  [routerLink]="['/edit-car',s.carID]">Edit</button>
+
+          <button *ngIf="s.carID !== null" class="btn btn-danger" (click)="deleteCar(s.carID)">Delete</button>
+
+          <button class="btn btn-info" [routerLink]="['/affectCare', s.carID]">Affect Too Ride</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</main>-->
+<main id="main" class="main">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-md-6" *ngFor="let s of cars">
+        <div class="card text-center bg-light mb-4">
+          <div class="card-header bg-primary text-white">
+            <strong>Cars available</strong>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><strong>Car Model:</strong> {{s.model}}</h5>
+            <h5 class="card-title"><strong>Comfort ? :</strong> {{s.comfort}}</h5>
+            <p class="card-text">Carpool with peace of mind with our car: comfortable, modern and secure.</p>
+            <a href="#" class="btn btn-primary" [routerLink]="['/affectCare', s.carID]">Affect To Ride</a>
+          </div>
+          <div class="card-footer text-muted bg-secondary text-white">
+            2 min ago
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<app-footer-front></app-footer-front>

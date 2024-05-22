@@ -1,0 +1,54 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<div class="container-fluid mt-5">
+  <div class="pt-5 d-flex justify-content-center">
+    <div class="d-flex justify-content-center">
+      <nav class="nav bg-dark ">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/category-list']">Category List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/register-category-product']"> Add Category </a>
+        </li>
+
+      </nav>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 mx-auto">
+    <table class="table table-light">
+        <thead class="thead-light">
+        <tr>
+           <!-- <th> ID Category</th> -->
+            <th> Name Category</th>
+          <th> Action</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr *ngFor="let c of categoryProducts">
+            <!--<td>{{c.idCategory}}</td>-->
+
+            <td>{{c.categoryName}}</td>
+
+            <td>
+                <button class="btn btn-warning" style="margin-right: 10px;" [routerLink]="['/edit-category-product',c.idCategory]" >EDIT</button>
+                <button class="btn btn-danger" (click)="deleteCategory(c.idCategory)" >DELETE</button>
+
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+    </div>
+  </div>
+</div>
+
+<app-footer-back></app-footer-back>

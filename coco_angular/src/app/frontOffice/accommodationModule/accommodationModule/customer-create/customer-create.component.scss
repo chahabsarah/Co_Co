@@ -1,0 +1,65 @@
+.card-image {
+    width: 30px; /* Adjust the width as needed */
+    margin-right: 5px; /* Adjust the spacing between image and text as needed */
+  }
+  .submit-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+ .form-group {
+    margin-bottom: 15px;
+  }
+
+ .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+ .form-control {
+    height: auto;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+  }
+
+ .form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }
+
+ .btn-success {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  }
+
+ .btn-success:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    color: #fff;
+  }
+
+ .card-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+ .submit-form h4 {
+    text-align: center;
+    margin-top: 20px;
+  }

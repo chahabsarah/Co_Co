@@ -1,0 +1,28 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<main id="main" class="main">
+  <form [formGroup]="stopForm" (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="inputName">Name</label>
+      <input type="text" class="form-control" formControlName="name" id="inputName" placeholder="Name">
+      <div class="alert alert-danger" *ngIf="stopForm.controls['name'].invalid && stopForm.controls['name'].touched">
+        <p *ngIf="stopForm.controls['name'].hasError('required')">Name is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputGPS">GPS Coordinates</label>
+      <input type="text" class="form-control" formControlName="gpscoordinates" id="inputGPS" placeholder="gpscoordinates">
+      <div class="alert alert-danger" *ngIf="stopForm.controls['gpscoordinates'].invalid && stopForm.controls['gpscoordinates'].touched">
+        <p *ngIf="stopForm.controls['gpscoordinates'].hasError('required')">GPS Coordinates is required</p>
+      </div>
+    </div>
+
+    <!-- Add more form fields for other stop properties -->
+
+    <button type="submit" class="btn btn-primary" [disabled]="stopForm.invalid">Submit</button>
+  </form>
+</main>
+
+<app-footer-back></app-footer-back>

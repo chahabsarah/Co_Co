@@ -1,0 +1,52 @@
+.payment-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .payment-details {
+    margin-bottom: 20px;
+  }
+  
+  .payment-details h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .payment-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .payment-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .flash-message {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .flash-message p {
+    margin: 0;
+  }
+  
+  .flash-message.success {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .flash-message.error {
+    background-color: #f44336;
+    color: #fff;
+  }
+

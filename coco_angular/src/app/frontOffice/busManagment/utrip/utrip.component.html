@@ -1,0 +1,22 @@
+<app-header-front></app-header-front>
+
+<main id="main" class="main">
+  <div class="card-container">
+    <div class="card" *ngFor="let trip of listTrip">
+      <img class="trip-image" src="assets/frontOffice/img/bus.jpeg" alt="Trip Image">
+
+      <div class="card-content">
+        <div class="trip-info">
+          <div><strong>Departure Location:</strong> {{ trip.departureLocation }}</div>
+          <div><strong>Arrival Location:</strong> {{ trip.arrivalLocation }}</div>
+          <div><strong>Estimated Duration:</strong> {{ trip.estimatedDuration }}</div>
+          <div><strong>Fare:</strong> {{ trip.fare }}</div>
+          <button (click)="showMap(trip.departureLocation, trip.arrivalLocation)" class="btn btn-primary">Show Map</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<app-footer-front></app-footer-front>

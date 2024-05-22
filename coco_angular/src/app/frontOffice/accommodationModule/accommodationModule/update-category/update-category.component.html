@@ -1,0 +1,27 @@
+
+<app-header-front></app-header-front>
+
+<main id="main" class="main">
+  <div class="ex-form-1 pt-5 pb-5">
+    <div>
+      <div class="row">
+        <div class="col-xl-6 offset-xl-3">
+          <div class="text-box mt-5 mb-5">
+            <form #f="ngForm" (ngSubmit)="update(f); formSubmitted = true;">
+              <div class="mb-4 form-floating">
+                <input type="text" class="form-control" id="categoryTitle" name="categoryTitle" [(ngModel)]="category.categoryTitle" required>
+                <label for="categoryTitle">Category Title</label>
+              </div>
+              <div class="mb-4 form-floating">
+                <input type="text" class="form-control" id="categoryDescription" name="categoryDescription" [(ngModel)]="category.categoryDescription" required>
+                <label for="categoryDescription">Category Description</label>
+              </div>
+              <button type="submit" class="form-control-submit-button">update Category</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer-front></app-footer-front>

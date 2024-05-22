@@ -1,0 +1,18 @@
+
+
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+<main id="main" class="main">
+
+<div *ngIf="accomodation" class="card mt-10">
+  <div class="card-body">
+    <h3 class="card-title">Accommodation Details</h3>
+    <p class="card-text">Number Of Room: {{ accomodation.numberOfRoom }}</p>
+    <p class="card-text">Localisation: {{ accomodation.localisation }}</p>
+    <p class="card-text">Address: {{ accomodation.address }}</p>
+    <p class="card-text">Rules: {{ accomodation.rules }}</p>
+    <p class="card-text">Price: {{ accomodation.rent_price }}</p>
+  </div>
+</div>
+</main>
+<app-footer-back></app-footer-back>

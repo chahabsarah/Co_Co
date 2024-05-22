@@ -1,0 +1,14 @@
+<app-header-front></app-header-front>
+<div class="row">
+  <div class="col-lg-4 col-md-6 mb-4" *ngFor="let accommodation of favoriteAccommodations">
+    <div class="card h-100">
+      <img class="card-img-top" [src]="'http://localhost:8085/spring2024/api/accommodations/' + accommodation.accommodationID + '/image'" alt="Image de l'hébergement">
+      <div class="card-body">
+        <h5 class="card-title">{{ accommodation.accommodationName }}</h5>
+        <p class="card-text">{{ accommodation.localisation }}</p>
+        <p class="card-text">Prix : {{ accommodation.rent_price }}</p>
+        <p class="card-text">Catégorie : {{ accommodation.categoryTitle }}</p>
+      </div>
+    </div>
+  </div>
+</div>

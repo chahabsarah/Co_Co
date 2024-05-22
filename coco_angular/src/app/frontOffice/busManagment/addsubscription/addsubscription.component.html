@@ -1,0 +1,87 @@
+<app-header-front></app-header-front>
+
+<div class="container">
+  <div class="container">
+    <div class="row justify-content-center"> <!-- Centering the row -->
+      <div class="col-md-6 text-center"> <!-- Centering the image within a column -->
+        <img src="assets/frontOffice/img/SUB.png" alt="Subscription Image" class="img-fluid mb-4" style="width: 400px; height: auto;">
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">10 Remaining Trips</h5>
+          <p class="card-text">Subscribe for 10 remaining trips</p>
+          <input type="radio" id="subscription10" name="subscription" value="10" [(ngModel)]="subscription.remainingTrips" required>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Trip Stops:</small>
+          <select id="subscriptionTripStops10" name="subscriptionTripStops10" [(ngModel)]="subscription.tripStops" required>
+            <option value="3">3 or Less</option>
+            <option value="5">5 or Less</option>
+            <option value="9999">More than 5</option> <!-- Utilisez une valeur assez grande -->
+          </select>
+          <br>
+          <small class="text-muted mt-2">Payment Method:</small>
+          <select id="subscriptionPaymentMethod10" name="subscriptionPaymentMethod10" [(ngModel)]="subscription.subscriptionPaymentMethod" required>
+            <option value="CREDIT_CARD">Credit Card</option>
+            <option value="CASH">Cash</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">20 Remaining Trips</h5>
+          <p class="card-text">Subscribe for 20 remaining trips</p>
+          <input type="radio" id="subscription20" name="subscription" value="20" [(ngModel)]="subscription.remainingTrips" required>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Trip Stops:</small>
+          <select id="subscriptionTripStops20" name="subscriptionTripStops20" [(ngModel)]="subscription.tripStops" required>
+            <option value="2">3 or Less</option>
+            <option value="4">5 or Less</option>
+            <option value="10">More than 5</option> <!-- Utilisez une valeur assez grande -->
+          </select>
+          <br>
+          <small class="text-muted mt-2">Payment Method:</small>
+          <select id="subscriptionPaymentMethod20" name="subscriptionPaymentMethod20" [(ngModel)]="subscription.subscriptionPaymentMethod" required>
+            <option value="CREDIT_CARD">Credit Card</option>
+            <option value="CASH">Cash</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">30 Remaining Trips</h5>
+          <p class="card-text">Subscribe for 30 remaining trips</p>
+          <input type="radio" id="subscription30" name="subscription" value="30" [(ngModel)]="subscription.remainingTrips" required>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Trip Stops:</small>
+          <select id="subscriptionTripStops30" name="subscriptionTripStops30" [(ngModel)]="subscription.tripStops" required>
+            <option value="3">3 or Less</option>
+            <option value="5">5 or Less</option>
+            <option value="9999">More than 5</option> <!-- Utilisez une valeur assez grande -->
+          </select>
+          <br>
+          <small class="text-muted mt-2">Payment Method:</small>
+          <select id="subscriptionPaymentMethod30" name="subscriptionPaymentMethod30" [(ngModel)]="subscription.subscriptionPaymentMethod" required>
+            <option value="CREDIT_CARD">Credit Card</option>
+            <option value="CASH">Cash</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary mt-3" (click)="addSubscription()">Add Subscription</button>
+</div>
+
+
+
+<app-footer-front></app-footer-front>

@@ -1,0 +1,154 @@
+
+<app-header-front></app-header-front>
+<!--<app-navbar-back></app-navbar-back>-->
+
+<main id="main" class="main">
+  <!--<div class="container-fluid">
+
+    <div class="card" style="width: 50%;margin: 5px auto;">
+      <div class="card-header">
+        Add New Ride
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="startLocation">start Location</label>
+            <input [(ngModel)]="ride.startLocation" id="startLocation" name="startLocation" class="form-control" type="text">
+          </div>
+
+
+          <div class="form-group">
+            <label for="departureDate">departureDate</label>
+            <input [(ngModel)]="ride.departureDate" id="departureDate" name="departureDate" class="form-control" type="date">
+          </div>
+
+          <div class="form-group">
+            <label for="arrivalDate">arrivalDate</label>
+            <input [(ngModel)]="ride.arrivalDate" id="arrivalDate" name="arrivalDate" class="form-control" type="date">
+          </div>
+          <div class="form-group">
+            <label for="price">price</label>
+            <input [(ngModel)]="ride.price" name="price" id="price" class="form-control" type="text">
+          </div>
+
+          <button class="btn btn-primary" (click)="saveRide(ride)">Save</button>
+        </form>
+      </div>
+      <div class="card-footer" *ngIf="showAlert">
+        <div class="alert alert-success">
+          <button (click)="closeAlert()" class="close">
+            &times;
+          </button>
+          <strong>Success</strong>
+        </div>
+      </div>
+    </div>
+  </div>-->
+  <!-- ****** ca c'est l'essentiel*********  -->
+  <!--<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            Add New Ride
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="startLocation">Start Location</label>
+                <input [(ngModel)]="ride.startLocation" id="startLocation" name="startLocation" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="departureDate">Departure Date</label>
+                <input [(ngModel)]="ride.departureDate" id="departureDate" name="departureDate" class="form-control" type="date">
+              </div>
+
+              <div class="form-group">
+                <label for="price">Price</label>
+                <input [(ngModel)]="ride.price" name="price" id="price" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="placeDisponible">Places Disponible</label>
+                <input [(ngModel)]="ride.placeDisponible" name="placeDisponible" id="placeDisponible" class="form-control" type="text">
+              </div>
+              <button class="btn btn-primary" (click)="saveRide(ride)">Save</button>
+            </form>
+          </div>
+        </div>
+        <div class="alert alert-success mt-3" *ngIf="showAlert">
+          <button (click)="closeAlert()" class="close">
+            &times;
+          </button>
+          <strong>Success</strong>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!-- ****** ca c'est l'essentiel*********  -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            Add New Ride
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="startLocation">Start Location</label>
+                <input [(ngModel)]="ride.startLocation" id="startLocation" name="startLocation" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="arrivalAddress">Arrival Address</label>
+                <input [(ngModel)]="ride.arrivalAddress" id="arrivalAddress" name="arrivalAddress" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="departureDate">Departure Date</label>
+                <input [(ngModel)]="ride.departureDate" id="departureDate" name="departureDate" class="form-control" type="date">
+              </div>
+              <!--<div class="form-group">
+                <label for="time">Time</label>
+                <input [(ngModel)]="ride.time" id="time" name="time" class="form-control" type="time">
+              </div>-->
+              <div class="form-group">
+                <label for="price">Price</label>
+                <input [(ngModel)]="ride.price" name="price" id="price" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="placeDisponible">Places Disponible</label>
+                <input [(ngModel)]="ride.placeDisponible" name="placeDisponible" id="placeDisponible" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="smokingVehicle">Smoking Vehicle</label>
+                <input [(ngModel)]="ride.smoking_Vehicle" id="smokingVehicle" name="smokingVehicle" class="form-control" type="checkbox">
+                <!--<input class="form-check-input" type="checkbox" [(ngModel)]="ride.smoking_Vehicle" id="smokingVehicle">-->
+
+              </div>
+              <div class="form-group">
+                <label for="preference">Preference</label>
+                <input [(ngModel)]="ride.preference" id="preference" name="preference" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="avoidTolls">Avoid Tolls</label>
+               <input [(ngModel)]="ride.avoidTolls" id="avoidTolls" name="avoidTolls" class="form-control" type="checkbox">
+                <!--<input class="form-check-input" type="checkbox" [(ngModel)]="ride.avoidTolls" id="avoidTolls">-->
+
+              </div>
+              <button class="btn btn-primary" (click)="saveRide(ride)">Save</button>
+            </form>
+          </div>
+        </div>
+        <div class="alert alert-success mt-3" *ngIf="showAlert">
+          <button (click)="closeAlert()" class="close">
+            &times;
+          </button>
+          <strong>Success</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</main>
+<app-footer-front></app-footer-front>

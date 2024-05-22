@@ -1,0 +1,76 @@
+<div class="mt-4">
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">My Route</h5>
+      <div class="mb-3">
+        <p class="card-text"><strong>Departure Address:</strong> {{ formData.step1?.departureAddress }}</p>
+        <p class="card-text"><strong>Arrival Address:</strong> {{ formData.step1?.arrivalAddress }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">My Role</h5>
+      <div class="mb-3">
+        <p class="card-text"><strong>Available Seats:</strong> {{ formData.step2?.availableSeats }}</p>
+        <p class="card-text"><strong>Is Smoker Friendly:</strong> {{ formData.step2?.isSmokerFriendly }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Date And Time</h5>
+      <div class="mb-3">
+        <p class="card-text"><strong>Date:</strong> {{ formData.step3?.departureDate }}</p>
+        <p class="card-text"><strong>Time:</strong> {{ formData.step3?.time }}</p>
+        <p class="card-text"><strong>Preference:</strong> {{ formData.step3?.preference }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Itinerary And Cost</h5>
+      <div class="mb-3">
+        <p class="card-text"><strong>Avoid Tolls:</strong> {{ formData.step4?.avoidTolls }}</p>
+        <p class="card-text"><strong>Price:</strong> {{ formData.step4?.price }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Car Added</h5>
+      <div class="mb-3">
+        <p class="card-text"><strong>Model :</strong> {{ formData.step5?.model }}</p>
+        <p class="card-text"><strong>Comfort :</strong> {{ formData.step5?.comfort }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Car Image</h5>
+      <div class="mb-3">
+        <p class="card-text"><strong>Date Added :</strong> {{ formData.step6?.dateAdded }}</p>
+        <p class="card-text"><strong>Time :</strong> {{ formData.step6?.time }}</p>
+        <p class="card-text"><strong>Format :</strong> {{ formData.step6?.format }}</p>
+        <p class="card-text"><strong>Path :</strong> {{ formData.step6?.path }}</p>
+        <p class="card-text"><strong>Description :</strong> {{ formData.step6?.description }}</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="d-flex justify-content-between flex-row mb-5 mt-4">
+  <button class="btn btn-outline-primary"  cdkStepperPrevious>
+    <i class="fa fa-angle-left"></i> Back To Itinerary & Cost
+  </button>
+  <button class="btn btn-outline-primary" (click)="saveDataa()" cdkStepperNext>
+    Publish <i class="fa fa-angle-right"></i>
+  </button>
+</div>

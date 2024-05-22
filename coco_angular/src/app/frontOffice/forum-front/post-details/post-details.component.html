@@ -1,0 +1,23 @@
+<!-- post-details.component.html -->
+<div class="container mt-4">
+  <div class="post-details">
+    <h2 class="mb-4">Post Details</h2>
+    <div class="card" *ngIf="post">
+      <div class="card-body">
+        <h2 class="card-title">{{ post.description }}</h2>
+        <p class="card-text created-date">Created on: {{ post.createdDate | date: 'medium' }}</p>
+
+        <div class="button-group mt-3">
+          <button class="btn btn-danger mr-2" (click)="deletePost(post.postId)">Delete</button>
+          <button class="btn btn-primary" (click)="toggleModificationForm()">Modify</button>
+        </div>
+
+        <!-- Modification Form -->
+        <div *ngIf="showModificationForm" class="mt-4">
+          <textarea class="form-control" [(ngModel)]="modifiedDescription" placeholder="Enter the new description" rows="4"></textarea>
+          <button class="btn btn-success mt-2" (click)="modifyPost()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

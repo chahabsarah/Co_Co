@@ -1,0 +1,114 @@
+a {
+  background-color:#05bbf2 ;
+  border-color: #05bbf2;
+  color:white;
+  border-width: 3px;
+  border-radius: 10px;
+}
+.bi-trash3{
+  fill :red;
+}
+.bi-pencil {
+  fill: #052077;
+}
+.bi-eye{
+  fill: #FFA500;
+}
+input[type=range] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Style pour les indicateurs */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+.row {
+  display: flex; /* Make the row container a flexbox */
+  flex-wrap: wrap; /* Allow images to wrap to multiple lines if needed */
+  margin: 0 -10px; /* Remove horizontal margins from images */
+}
+
+.col-md-4 img {
+  width: 100%; /* Set image width to 100% of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the entire image area */
+  border: none; /* Remove image border */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom animation */
+}
+
+.col-md-4 img:hover {
+  transform: scale(1.1); /* Apply zoom on hover */
+  cursor: zoom-in; /* Set cursor to zoom-in on hover */
+  position: relative; /* Create a stacking context for overflow */
+  z-index: 1; /* Lift image above card content on hover */
+}
+
+.card-footer {
+  overflow: hidden; /* Hide overflow when image zooms */
+}
+/* Style the room type tag */
+.room-type {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #84708a; /* Adjust color as desired */
+  background-color: #fff; /* Adjust background color as desired */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Style the price tag */
+.price-tag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #c2a650; /* Adjust color as desired */
+  background-color: #333; /* Adjust background color as desired */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.btn-next, .btn-prev {
+  background-color:red;
+  color: white; /* Couleur du texte */
+  width: 30px; /* Largeur du bouton */
+  height: 30px; /* Hauteur du bouton */
+  border-radius: 50%; /* Forme circulaire */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .btn-next::before, .btn-prev::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+ }
+
+ .btn-next::before {
+  margin-left: 5px;
+ }
+
+ .btn-prev::before {
+  margin-right: 5px;
+ }

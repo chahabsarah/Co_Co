@@ -1,0 +1,39 @@
+
+<div class="mt-4">
+  <div class="row">
+    <div class="col-md-6">
+     <div class="input-group mb-3">
+     <!-- <span class="input-group-text" id="model">model</span>
+      <input type="text" class="form-control" placeholder="model" [(ngModel)]="model" aria-label="model" aria-describedby="model">-->
+
+       <label for="model">Car Model:</label>
+       <select [(ngModel)]="model" id="model" name="model" class="form-control">
+         <option value="mercedes">MERCEDES</option>
+         <option value="bmw">BMW</option>
+         <option value="audi">AUDI</option>
+         <option value="toyota">TOYOTA</option>
+         <option value="polo">POLO</option>
+         <option value="peugeot">PEUGEOT</option>
+         <option value="dacia">DACIA</option>
+       </select>
+
+     </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="comfort" id="comfort">
+        <label class="form-check-label" for="comfort">
+          My car is comfort !
+        </label>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="d-flex justify-content-between flex-row mb-5 mt-4">
+  <button class="btn btn-outline-primary" cdkStepperPrevious>
+    <i class="fa fa-angle-left"></i> Back To Itinerary & Cost
+  </button>
+  <button class="btn btn-outline-primary" (click)="showFormData()" cdkStepperNext>
+    Go To ADD Image <i class="fa fa-angle-right"></i>
+  </button>
+</div>

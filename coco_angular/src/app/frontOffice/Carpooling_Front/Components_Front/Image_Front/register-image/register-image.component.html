@@ -1,0 +1,97 @@
+<!--<app-header-front></app-header-front>
+<div class="container">
+<main id="main" class="main">
+  <div class="container-fluid">
+    <div class="card" style="width: 80%;">
+      <div class="card-header">
+        <div class="form-group"> Add New Car</div>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="dateAdded">date Added :</label>
+            <input [(ngModel)]="image.dateAdded" id="dateAdded" name="dateAdded" class="form-control" type="date">
+          </div>
+          <div class="form-group">
+            <label for="Time">Time Added :</label>
+            <input [(ngModel)]="image.time" id="Time" name="Time" class="form-control" type="time">
+          </div>
+          <div class="form-group">
+            <label for="format">Format Image</label>
+            <input [(ngModel)]="image.format" id="format" name="format" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="path">Path Image :</label>
+            <input [(ngModel)]="image.path" id="path" name="path" class="form-control" type="text">
+            <a href="http://localhost:8086" target="_blank">Upload Image</a>
+
+          </div>
+          <div class="form-group">
+            <label for="description">Description Image :</label>
+            <textarea [(ngModel)]="image.description" id="description" name="description" class="form-control" rows="3"></textarea>
+          </div>
+<div class="text-center">
+  <button class="btn btn-primary" (click)="saveImage(image)">Save Your Image</button>
+</div>
+        </form>
+      </div>
+      <div class="card-footer" *ngIf="showAlert">
+        <div class="alert alert-success">
+          <button (click)="closeAlert()" class="close">
+            &times;
+          </button>
+          <strong>Success</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>-->
+<div class="container">
+  <main id="main" class="main">
+    <div class="container-fluid">
+      <div class="form-container">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="dateAdded">Date Added:</label>
+              <input [(ngModel)]="dateAdded" id="dateAdded" name="dateAdded" class="form-control" type="date">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Time">Time Added:</label>
+              <input [(ngModel)]="time" id="Time" name="Time" class="form-control" type="time">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="format">Format Image:</label>
+            <select [(ngModel)]="format" id="format" name="format" class="form-control">
+              <option value="jpeg">JPEG</option>
+              <option value="png">PNG</option>
+              <option value="gif">GIF</option>
+              <option value="bmp">BMP</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="path">Path Image:</label>
+            <input [(ngModel)]="path" id="path" name="path" class="form-control" type="text">
+            <a href="http://localhost:8086" target="_blank">Upload Image</a>
+          </div>
+          <div class="form-group">
+            <label for="description">Description Image:</label>
+            <textarea [(ngModel)]="description" id="description" name="description" class="form-control" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+<div class="d-flex justify-content-between flex-row mb-5 mt-4">
+  <button class="btn btn-outline-primary" cdkStepperPrevious>
+    <i class="fa fa-angle-left"></i> Back To ADD Car
+  </button>
+  <button class="btn btn-outline-primary" (click)="showFormData()" cdkStepperNext>
+    Go To Publish <i class="fa fa-angle-right"></i>
+  </button>
+</div>
+
+<!--<app-footer-front></app-footer-front>-->

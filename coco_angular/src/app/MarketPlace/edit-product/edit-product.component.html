@@ -1,0 +1,79 @@
+<app-header-back></app-header-back>
+<app-navbar-back></app-navbar-back>
+
+<div class="container-fluid mt-5">
+    <div class="pt-4">
+        <div class="d-flex justify-content-center">
+            <nav class="nav bg-dark">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/product-list']">Product List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/register-product']"> Add Product </a>
+                </li>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center">
+            <div>
+                <h2>Edit Product</h2>
+
+                <form [formGroup]="registerForm" (ngSubmit)="saveEditedCategory()">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="idProduct">Product ID</label>
+                            <input formControlName="idProduct" id="idProduct" class="form-control" type="text" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Product Name</label>
+                            <input formControlName="name" id="name" class="form-control" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="typeProduct">Type of Product</label>
+                            <input formControlName="typeProduct" id="typeProduct" class="form-control" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input formControlName="description" id="description" class="form-control" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input formControlName="quantity" id="quantity" class="form-control" type="number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weight">Weight</label>
+                            <input formControlName="weight" id="weight" class="form-control" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input formControlName="price" id="price" class="form-control" type="number">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" >Save Changes</button>
+                    </div>
+                </form>
+
+                <div class="card-footer" *ngIf="showAlert">
+                    <div class="alert alert-success" role="alert">
+                        <button class="close" (click)="closeAlert()">&times;</button>
+                        <strong>Successfully edited</strong>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer-back></app-footer-back>

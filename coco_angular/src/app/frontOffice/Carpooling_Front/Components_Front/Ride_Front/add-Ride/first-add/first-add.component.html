@@ -1,0 +1,38 @@
+<app-header-front></app-header-front>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9 mx-auto">
+      <div class="text-center border rounded p-3 mb-4 bg-primary text-white">
+        <h2 class="mt-4">POST AN AD</h2>
+        <h6 class="mt-2">Post your carpooling ad in one minute</h6>
+      </div>
+      <app-stepper [linearModeSelected]="false" #appStepper>
+        <cdk-step [label]="'My route'">
+          <app-information></app-information>
+        </cdk-step>
+        <cdk-step [label]="'My Role'">
+          <app-contact></app-contact>
+        </cdk-step>
+        <cdk-step [label]="'Date / Time'">
+          <app-security></app-security>
+        </cdk-step>
+        <cdk-step [label]="'Itinerary&Cost'">
+          <app-display-cardd></app-display-cardd>
+        </cdk-step>
+       <cdk-step [label]="'Add Car'">
+          <app-add-car></app-add-car>
+        </cdk-step>
+        <cdk-step [label]="'Add Image'">
+          <app-register-image></app-register-image>
+        </cdk-step>
+        <cdk-step [label]="'Publish'">
+          <app-finish></app-finish>
+        </cdk-step>
+        <cdk-step [label]="'Finish'">
+          <app-confirm></app-confirm>
+        </cdk-step>
+      </app-stepper>
+    </div>
+  </div>
+</div>
+<app-footer-front></app-footer-front>

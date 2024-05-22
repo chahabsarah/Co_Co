@@ -1,0 +1,97 @@
+.full-width-container {
+  background-size: cover; /* Assure que l'image couvre toute la div */
+  padding: 20px; /* Espacement intérieur */
+  width: 100%; /* Largeur totale de la page */
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+
+.input-field {
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3); /* Add a semi-transparent white background */
+  color: #fff;
+}
+
+.action-button {
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  background-color: #007bff; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Curseur pointer au survol */
+}
+.container{
+ // background-image: url("https://thumbs.dreamstime.com/b/concept-carpooling-illustrated-picture-background-155899875.jpg");
+  //background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/06/Pictures-Download-HD-Car-Wallpapers.jpg");
+  //background-image: url("https://i.pinimg.com/736x/56/3c/1b/563c1b8a3d01536c6127361178e6cdc5.jpg");
+ // background-image: url("https://thumbs.dreamstime.com/z/carpool-mobility-concept-modern-form-passenger-transport-person-smartphone-looking-carpooling-rideshare-179513198.jpg");
+  background-image: url("https://thumbs.dreamstime.com/z/voiture-sur-une-carte-avec-un-support-de-goupille-gps-et-concept-localisation-101024626.jpg");
+margin-bottom: 30px;
+  //background-color: #ebe4e4;
+}
+
+.haut{
+  background-color: #76C974;
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+.haut.h3{
+  color: white;
+}
+.titre{
+  margin-top: 70px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+
+}
+.tex{
+  color: #000000;
+}
+.ride{
+background-color: #171B17;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.Pride{
+  margin-top: 20px;
+  color: #000000;
+  margin-bottom: 20px;
+
+}
+.annonce{
+  margin-top: 20px;
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  background-color: #007bff; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Curseur pointer au survol */
+
+}
+
+.cards {
+  display: flex; /* Utiliser un conteneur flex pour centrer le contenu */
+  justify-content: center; /* Centrer le contenu horizontalement */
+  text-align: center; /* Centrer le contenu à l'intérieur des cartes */
+ // background-color: #0f6674;
+  margin-bottom: 20px;
+}
+
+.card {
+  margin: 0 10px; /* Ajouter une marge autour de chaque carte pour un espacement */
+  width: 18rem;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+.amir{
+  margin-bottom: 40px;
+  margin-top: 40px;
+  text-align: center;
+}
+.input-group{
+  margin-bottom: 30px;
+}
